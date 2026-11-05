@@ -1,0 +1,6 @@
+{
+  "name": "SMP Negeri 6 Jember",
+  "description": "Landing page resmi dan portal interaktif terpadu SMP Negeri 6 Jember dengan navigasi Home 1 hingga Home 5.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

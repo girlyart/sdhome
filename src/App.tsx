@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { HomeNavigation, HomeTab } from './components/HomeNavigation';
+import schoolCampusImg from './assets/images/hero_smpn6_campus_1793890518670.jpg';
+import tutWuriLogo from './assets/images/tutwuri_handayani.png';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<HomeTab>('home-1');
@@ -23,7 +25,10 @@ export default function App() {
       {/* Background School Campus Photo with Controlled Transparency */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img
-          src="/src/assets/images/hero_smpn6_campus_1793890518670.jpg"
+          src={schoolCampusImg}
+          onError={(e) => {
+            (e.currentTarget as HTMLImageElement).src = '/images/hero_smpn6_campus.jpg';
+          }}
           alt="Gedung Kampus SMP Negeri 6 Jember"
           className="w-full h-full object-cover object-center opacity-25 filter scale-105"
           referrerPolicy="no-referrer"
@@ -44,11 +49,28 @@ export default function App() {
 
       {/* Main Center Stage */}
       <div className="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center">
+        {/* Official Tut Wuri Handayani Logo */}
+        <div className="mb-4 sm:mb-6 flex justify-center">
+          <img
+            src={tutWuriLogo}
+            onError={(e) => {
+              (e.currentTarget as HTMLImageElement).src = '/assets/aistudio/image_54c9ac49.png';
+            }}
+            alt="Logo Tut Wuri Handayani"
+            className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-contain drop-shadow-2xl transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+
         {/* Title: All uppercase with JEMBER in Yellow */}
-        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight mb-8 sm:mb-12 drop-shadow-md">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight mb-4 sm:mb-6 drop-shadow-md">
           <span className="text-white">SMP NEGERI 6 </span>
           <span className="text-yellow-400">JEMBER</span>
         </h1>
+
+        {/* Tagline */}
+        <p className="text-sm sm:text-base md:text-lg text-blue-100 font-normal max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed drop-shadow px-2">
+          Komitmen kami adalah menghadirkan pendidikan inklusif, penguatan adab Islami & budi pekerti, serta kesiapan teknologi masa depan yang bermakna untuk setiap anak.
+        </p>
 
         {/* The 5 Buttons: only Home 1 to Home 5 */}
         <div className="w-full">

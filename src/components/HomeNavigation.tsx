@@ -30,7 +30,7 @@ export const HomeNavigation: React.FC<HomeNavigationProps> = ({
   return (
     <div className={`w-full max-w-3xl mx-auto ${className}`}>
       <nav
-        aria-label="Navigasi Home SMP Negeri 6 Jember"
+        aria-label="Navigasi Home SMP Negeri Jember"
         className="grid grid-cols-2 sm:grid-cols-5 gap-3 p-2.5 rounded-2xl bg-blue-950/60 backdrop-blur-md border border-white/15 shadow-xl shadow-blue-950/40"
       >
         {HOME_TABS.map((item) => {

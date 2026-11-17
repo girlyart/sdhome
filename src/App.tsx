@@ -29,7 +29,7 @@ export default function App() {
           onError={(e) => {
             (e.currentTarget as HTMLImageElement).src = '/images/hero_smpn6_campus.jpg';
           }}
-          alt="Gedung Kampus SMP Negeri 6 Jember"
+          alt="Gedung Kampus SMP Negeri Jember"
           className="w-full h-full object-cover object-center opacity-25 filter scale-105"
           referrerPolicy="no-referrer"
         />
@@ -63,7 +63,7 @@ export default function App() {
 
         {/* Title: All uppercase with JEMBER in Yellow */}
         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight mb-4 sm:mb-6 drop-shadow-md">
-          <span className="text-white">SMP NEGERI 6 </span>
+          <span className="text-white">SMP NEGERI </span>
           <span className="text-yellow-400">JEMBER</span>
         </h1>
 
